@@ -18,7 +18,7 @@ app.use("/api", matchRoutes);
 app.use("/api/orphans", orphanRoutes);
 app.use("/api/parents", parentRoutes);
 app.use("/api/orphanages", orphanageRoutes);
-app.use("/chatbot", chatbotRoutes);
+app.use("/api/chatbot", chatbotRoutes);
 
 
 const PORT = process.env.PORT || 8000;
