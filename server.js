@@ -7,6 +7,8 @@ const orphanRoutes = require("./routes/orphanRoutes");
 const parentRoutes = require("./routes/parentRoutes");
 const orphanageRoutes = require("./routes/orphanageRoutes");
 const matchRoutes = require("./routes/matchRoutes");
+const chatbotRoutes = require("./routes/chatbotRoutes");
+
 
 const app = express();
 app.use(cors());
@@ -16,6 +18,8 @@ app.use("/api", matchRoutes);
 app.use("/api/orphans", orphanRoutes);
 app.use("/api/parents", parentRoutes);
 app.use("/api/orphanages", orphanageRoutes);
+app.use("/api/chatbot", chatbotRoutes);
+
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
