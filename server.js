@@ -14,6 +14,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', async(req, res)=>{
+    res.json({message: "All good"})
+});
+
 app.use("/api", matchRoutes);
 app.use("/api/orphans", orphanRoutes);
 app.use("/api/parents", parentRoutes);
